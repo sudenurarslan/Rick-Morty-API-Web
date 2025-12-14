@@ -8,7 +8,7 @@ async function handleResponse(res) {
       const err = await res.json();
       if (err?.error) message = err.error;
     } catch {
-      // JSON değilse boşver
+     
     }
 
     throw new Error(message);
@@ -32,7 +32,7 @@ export async function fetchCharacter(id) {
   return handleResponse(res);
 }
 
-// İleride istersen bunları da kullanacağız:
+
 export async function fetchEpisodes(page = 1) {
   const params = new URLSearchParams();
   params.set("page", page);

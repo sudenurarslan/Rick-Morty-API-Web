@@ -55,7 +55,7 @@ export default function CharacterDetailPage() {
 
   return (
     <section className="max-w-4xl mx-auto">
-      {/* Back Button */}
+     
       <Link
         to="/characters"
         className="inline-flex items-center gap-2 text-galaxyAccentSoft hover:text-galaxyAccent transition-colors mb-6 group"
@@ -66,17 +66,14 @@ export default function CharacterDetailPage() {
         Back to characters
       </Link>
 
-      {/* Character Card */}
       <div className="bg-gradient-to-br from-galaxyCard/80 to-galaxyBgSoft/80 backdrop-blur-xl border-2 border-galaxyBorder rounded-3xl overflow-hidden shadow-2xl shadow-galaxyAccent/10">
         <div className="grid gap-8 md:grid-cols-[300px,1fr] p-8">
-          {/* Image */}
           <div className="relative">
             <img
               src={character.image}
               alt={character.name}
               className="w-full rounded-2xl border-2 border-galaxyBorder shadow-lg"
             />
-            {/* Status Badge */}
             <div className="absolute top-4 right-4 px-3 py-1 rounded-full bg-galaxyCard/90 backdrop-blur border border-galaxyBorder flex items-center gap-2">
               <span className={`w-2 h-2 rounded-full ${
                 character.status === 'Alive' ? 'bg-green-400' :
@@ -87,7 +84,6 @@ export default function CharacterDetailPage() {
             </div>
           </div>
 
-          {/* Info */}
           <div className="space-y-6">
             <div>
               <h1 className="text-4xl font-bold bg-gradient-to-r from-galaxyAccentSoft to-galaxyAccent bg-clip-text text-transparent mb-2">
@@ -97,8 +93,6 @@ export default function CharacterDetailPage() {
                 {character.species} • {character.gender}
               </p>
             </div>
-
-            {/* Details Grid */}
             <div className="grid gap-4">
               <div className="bg-galaxyBgSoft/50 rounded-xl p-4 border border-galaxyBorder/50">
                 <p className="text-xs uppercase tracking-wider text-galaxyTextMuted mb-1">Status</p>
@@ -135,7 +129,6 @@ export default function CharacterDetailPage() {
           </div>
         </div>
 
-        {/* Footer Button */}
         <div className="border-t-2 border-galaxyBorder/50 p-6 bg-galaxyBgSoft/30">
           <Link
             to="/characters"

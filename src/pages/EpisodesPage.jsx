@@ -4,7 +4,7 @@ import { fetchEpisodes } from "../services/api.js";
 
 export default function EpisodesPage() {
   const [episodes, setEpisodes] = useState([]);
-  const [info, setInfo] = useState(null); // pagination meta
+  const [info, setInfo] = useState(null); 
   const [page, setPage] = useState(1);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
@@ -31,7 +31,7 @@ export default function EpisodesPage() {
 
   return (
     <section className="space-y-6">
-      {/* Header */}
+    
       <div className="space-y-2">
         <h1 className="text-3xl font-bold bg-gradient-to-r from-galaxyAccentSoft to-galaxyAccent bg-clip-text text-transparent">
           Episodes
@@ -40,8 +40,6 @@ export default function EpisodesPage() {
           Browse episodes from the Rick and Morty series.
         </p>
       </div>
-
-      {/* Loading & Error */}
       {loading && (
         <div className="text-center py-8">
           <div className="inline-block w-8 h-8 border-4 border-galaxyAccent/30 border-t-galaxyAccent rounded-full animate-spin" />
@@ -54,8 +52,6 @@ export default function EpisodesPage() {
           <p className="text-red-400 text-sm">{error}</p>
         </div>
       )}
-
-      {/* Liste */}
       {!loading && !error && (
         <>
           {episodes.length === 0 ? (
@@ -104,7 +100,6 @@ export default function EpisodesPage() {
             </ul>
           )}
 
-          {/* Pagination */}
           {info && (
             <div className="flex justify-between items-center mt-6 bg-galaxyCard/30 backdrop-blur border-2 border-galaxyBorder rounded-xl p-4">
               <button

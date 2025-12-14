@@ -85,7 +85,6 @@ export default function CharactersPage() {
         </button>
       </form>
 
-      {/* Loading */}
       {loading && (
         <div className="flex flex-col items-center gap-3 py-10">
           <img
@@ -99,17 +98,16 @@ export default function CharactersPage() {
         </div>
       )}
 
-      {/* Error */}
+   
       {!loading && error && (
         <div className="bg-galaxyCard border border-galaxyBorder rounded-xl p-4">
           <p className="text-red-400 text-sm">{error}</p>
         </div>
       )}
 
-      {/* Content */}
       {!loading && !error && (
         <>
-          {/* Empty State with Portal */}
+      
           {characters.length === 0 ? (
             <div className="flex flex-col items-center gap-4 py-16">
 
@@ -139,8 +137,6 @@ export default function CharactersPage() {
                   />
                 ))}
               </div>
-
-              {/* Pagination */}
               {info && (
                 <div className="flex justify-between items-center mt-4 text-sm text-galaxyTextSoft/90">
                   <button

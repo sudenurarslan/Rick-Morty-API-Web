@@ -51,7 +51,6 @@ export default function EpisodeDetailPage() {
 
   if (!episode) return null;
 
-  // Karakter ID'lerini URL'den çekmek için küçük yardımcı fonksiyon:
   const getCharacterIdFromUrl = (url) => {
     const parts = url.split("/");
     return parts[parts.length - 1];
@@ -59,7 +58,6 @@ export default function EpisodeDetailPage() {
 
   return (
     <section className="max-w-4xl mx-auto">
-      {/* Back Button */}
       <Link
         to="/episodes"
         className="inline-flex items-center gap-2 text-galaxyAccentSoft hover:text-galaxyAccent transition-colors mb-6 group"
@@ -70,10 +68,8 @@ export default function EpisodeDetailPage() {
         Back to episodes
       </Link>
 
-      {/* Episode Card */}
       <div className="bg-gradient-to-br from-galaxyCard/80 to-galaxyBgSoft/80 backdrop-blur-xl border-2 border-galaxyBorder rounded-3xl overflow-hidden shadow-2xl shadow-galaxyAccent/10">
         <div className="p-8 space-y-6">
-          {/* Header */}
           <div className="space-y-3">
             <h1 className="text-4xl font-bold bg-gradient-to-r from-galaxyAccentSoft to-galaxyAccent bg-clip-text text-transparent">
               {episode.name}
@@ -90,7 +86,7 @@ export default function EpisodeDetailPage() {
             </div>
           </div>
 
-          {/* Characters Section */}
+      
           <div className="space-y-4 pt-4">
             <h2 className="text-2xl font-bold text-galaxyAccentSoft flex items-center gap-2">
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -132,7 +128,7 @@ export default function EpisodeDetailPage() {
           </div>
         </div>
 
-        {/* Footer Button */}
+      
         <div className="border-t-2 border-galaxyBorder/50 p-6 bg-galaxyBgSoft/30">
           <Link
             to="/episodes"
