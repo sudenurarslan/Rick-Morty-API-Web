@@ -1,3 +1,4 @@
+LIVE DEMO LINK: https://rick-morty-api-web.vercel.app/
 # Rick and Morty Wiki
 
 This project was developed as a midterm assignment for the **Web Programming (SE 3355)** course.
